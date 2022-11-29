@@ -4,9 +4,9 @@
     <div class="form-group">
       <label> Enter URL </label>
       <input type="text" formControlName="url" class="form-control mb-2">
-      <div *ngIf="msg.url.touched && msg.url.invalid" class="alert alert-danger">
-        <div *ngIf="msg.url.errors?.required">Please provide url</div>
-        <div *ngIf="msg.url.errors?.pattern">Please provide url</div>
+      <div *ngIf="msg['url'].touched && msg['url'].invalid" class="alert alert-danger">
+        <div class="warning" *ngIf="msg['url'].errors?.['required']">Please provide url</div>
+        <div class="warning"  *ngIf="msg['url'].errors?.['pattern']">Please provide url</div>
       </div>
     </div>
     <div class="d-grid mt-3">
